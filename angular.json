@@ -1,0 +1,11 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "flava-api": "apps/flava-api",
+    "flava-api-swagger": "libs/generated/flava-api-swagger",
+    "flava-api-test": "apps/flava-api-test",
+    "flava-web": "apps/flava-web",
+    "flava-web-e2e": "apps/flava-web-e2e"
+  }
+}
