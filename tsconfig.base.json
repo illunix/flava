@@ -21,7 +21,10 @@
       "@flava/web/shell/ui/main-view": [
         "libs/web/shell/ui/main-view/src/index.ts"
       ],
-      "@flava/web/shell/ui/nav-bar": ["libs/web/shell/ui/nav-bar/src/index.ts"]
+      "@flava/web/shell/ui/nav-bar": ["libs/web/shell/ui/nav-bar/src/index.ts"],
+      "@flava/web/shell/ui/sign-in-dialog": [
+        "libs/web/shell/ui/sign-in-dialog/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
