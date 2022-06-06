@@ -13,6 +13,18 @@ export class SignInDialogComponent  {
         this.dialogRef.close();
     }
 
+    public onSignInWithFacebook(): void {
+
+    }
+
+    public onSignInWithGoogle(): void {
+
+    }
+
+    public onSignInWithApple(): void {
+        
+    }
+
     public onSignIn(): void {
     }
 }

@@ -11,10 +11,12 @@ export class NavBarComponent {
   constructor(private dialog: MatDialog) {}
 
   public onToggleSignInDialog(): void {
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
-    // dialogConfig.panelClass = "my-mat-dialog-container";
+    const dialogConfig: MatDialogConfig = {
+      disableClose: false,
+      autoFocus: true,
+      width: '400px',
+      height: '500px'
+    }
     
     this.dialog.open(
       SignInDialogComponent, 
