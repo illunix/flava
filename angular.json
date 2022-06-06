@@ -6,6 +6,10 @@
     "flava-api-swagger": "libs/generated/flava-api-swagger",
     "flava-api-test": "apps/flava-api-test",
     "flava-web": "apps/flava-web",
-    "flava-web-e2e": "apps/flava-web-e2e"
+    "flava-web-e2e": "apps/flava-web-e2e",
+    "web-home-feature": "libs/web/home/feature",
+    "web-shell-feature": "libs/web/shell/feature",
+    "web-shell-ui-layout": "libs/web/shell/ui/layout",
+    "web-shell-ui-main-view": "libs/web/shell/ui/main-view"
   }
 }
