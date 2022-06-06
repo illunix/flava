@@ -10,6 +10,7 @@
     "web-home-feature": "libs/web/home/feature",
     "web-shell-feature": "libs/web/shell/feature",
     "web-shell-ui-layout": "libs/web/shell/ui/layout",
-    "web-shell-ui-main-view": "libs/web/shell/ui/main-view"
+    "web-shell-ui-main-view": "libs/web/shell/ui/main-view",
+    "web-shell-ui-nav-bar": "libs/web/shell/ui/nav-bar"
   }
 }

@@ -20,7 +20,8 @@
       "@flava/web/shell/ui/layout": ["libs/web/shell/ui/layout/src/index.ts"],
       "@flava/web/shell/ui/main-view": [
         "libs/web/shell/ui/main-view/src/index.ts"
-      ]
+      ],
+      "@flava/web/shell/ui/nav-bar": ["libs/web/shell/ui/nav-bar/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
