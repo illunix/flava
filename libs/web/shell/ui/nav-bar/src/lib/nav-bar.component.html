@@ -1,7 +1,11 @@
 <nav class="bg-white border px-2 sm:px-4 py-2.5">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
     <a class="flex items-center">
-      <span class="self-center text-xl font-semibold whitespace-nowrap text-black">Flava</span>
+      <span class="self-center text-2xl font-semibold whitespace-nowrap text-black">
+        <span>Fla</span>
+        <span class="text-purple-600">v</span>
+        <span class="text-red-600">a</span>
+      </span>
     </a>
     <div class="hidden w-full md:block md:w-auto">
       <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
@@ -9,10 +13,10 @@
           <a href="#" class="hover:text-slate-500">Home</a>
         </li>
         <li>
-          <a href="#" class="hover:text-slate-500">Sign in</a>
+          <a (click)="onToggleSignInDialog()" class="hover:text-slate-500 cursor-pointer">Sign in</a>
         </li>
         <li>
-          <a href="#" class="bg-green-500 hover:text-white rounded">Sell now</a>
+          <a href="#" class="text-green-600 hover:text-black rounded">Sell now</a>
         </li>
       </ul>
     </div>
