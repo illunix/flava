@@ -14,15 +14,18 @@ export class SignInDialogComponent  {
     }
 
     public onSignInWithFacebook(): void {
-
     }
 
     public onSignInWithGoogle(): void {
-
+        console.log('elo');
     }
 
     public onSignInWithApple(): void {
         
+    }
+
+    public onSignInWithWalletConnect(): void {
+
     }
 
     public onSignIn(): void {

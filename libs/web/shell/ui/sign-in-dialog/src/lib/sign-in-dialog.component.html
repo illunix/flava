@@ -1,20 +1,29 @@
-<h2 mat-dialog-title class="text-center font-bold">Sign in</h2>
+<p mat-dialog-title class="text-center text-3xl font-bold">Sign in</p>
 
-<mat-dialog-content class="grid grid-cols-1 space-y-4 divide-y-2">
+<mat-dialog-content class="grid grid-cols-1 space-y-4">
   <div class="flex flex-col text-center space-y-4">
-    <button (click)="onSignInWithFacebook()" class="bg-[#3b5998] w-5/2 h-11 border-black rounded cursor-pointer text-white font-bold outline-none">
-      Continue with Facebook
+    <button class="inline-flex items-center justify-center bg-[#3b5998] w-5/2 h-11 border-[0.01em] border-[#3b5998] rounded cursor-pointer space-x-2 text-white font-bold outline-none">
+      <img src="assets/images/facebook_logo.svg" width="20px" class="inline-block">
+      <span>Continue with Facebook</span>
     </button>
-    <button (click)="onSignInWithGoogle()" class="bg-white w-5/2 h-11 border-[0.01em] border-[#e1e1e1] rounded cursor-pointer text-black font-bold">
-      Continue with Google
+    <button class="inline-flex items-center justify-center bg-white w-5/2 h-11 border-[0.01em] border-[#e1e1e1] rounded cursor-pointer space-x-2 text-black font-bold">
+      <img src="assets/images/google__g__logo.svg" width="20px" class="inline-block">
+      <span>Continue with Google</span>
     </button>
-    <button (click)="onSignInWithApple()" class="bg-black w-5/2 h-11 border-black rounded cursor-pointer text-white font-bold">
-      Continue with Apple
+    <button class="inline-flex items-center justify-center bg-black w-5/2 h-11 border-[0.01em] border-black rounded cursor-pointer space-x-2 text-white font-bold">
+      <img src="assets/images/apple_logo.svg" width="20px" class="inline-block">
+      <span>Continue with Apple</span>
+    </button>
+    <button class="inline-flex items-center justify-center bg-white w-5/2 h-11 border-[0.01em] border-[#e1e1e1] rounded cursor-pointer space-x-2 text-black font-bold">
+      <img src="assets/images/walletconnect_logo.svg" width="20px" class="inline-block">
+      <span>Continue with WalletConnect</span>
     </button>
   </div>
-  <div class="flex flex-col text-center space-y-4">
-    <button (click)="onSignIn()" class="bg-black w-5/2 h-11 border-black rounded cursor-pointer text-white font-bold">
+  <hr class="w-5/2 h-[0.01em] rounded bg-[#e7e7e7]" />
+  <div class="flex flex-col space-y-2">
+    <button (click)="onSignIn()" class="bg-black w-5/2 h-11 border-[0.01em] border-black rounded cursor-pointer text-white text-center font-bold">
       Sign in with Email
     </button>
+    <p class="text-blackt text-sm cursor-pointer">Don't have an account?</p>
   </div>
 </mat-dialog-content>
