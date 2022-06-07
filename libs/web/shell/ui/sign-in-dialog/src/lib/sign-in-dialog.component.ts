@@ -7,6 +7,8 @@ import { MatDialogRef } from '@angular/material/dialog';
     styleUrls: ['./sign-in-dialog.component.scss']
 })
 export class SignInDialogComponent  {
+    public signInWithEmail: boolean;
+
     constructor(private dialogRef: MatDialogRef<SignInDialogComponent>) { }
 
     public onClose(): void {
@@ -17,7 +19,6 @@ export class SignInDialogComponent  {
     }
 
     public onSignInWithGoogle(): void {
-        console.log('elo');
     }
 
     public onSignInWithApple(): void {
@@ -28,6 +29,6 @@ export class SignInDialogComponent  {
 
     }
 
-    public onSignIn(): void {
+    public onSignInWithEmail(): void {
     }
 }
