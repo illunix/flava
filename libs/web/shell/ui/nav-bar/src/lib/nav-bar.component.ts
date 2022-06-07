@@ -14,7 +14,8 @@ export class NavBarComponent {
     const dialogConfig: MatDialogConfig = {
       disableClose: false,
       autoFocus: true,
-      width: '400px'
+      width: '400px',
+      height: '450px'
     }
     
     this.dialog.open(
