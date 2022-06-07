@@ -1,15 +1,39 @@
+using Amazon.DynamoDBv2;
+using Amazon.DynamoDBv2.DataModel;
+using Flava.API.Infrastructure.Extensions;
+using Flava.API.Infrastructure.Filters;
+using MediatR;
+
 var builder = WebApplication.CreateBuilder(args);
+var configuration = builder.Configuration;
+var services = builder.Services;
 
-// Add services to the container.
+services.AddControllers(q =>
+{
+   q.Filters
+      .Add(typeof(ValidatorActionFilter));
+   q.Filters
+      .Add(typeof(CustomExceptionFilterAttribute));
+});
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+services.AddRouting(q => q.LowercaseUrls = true);
+
+services.AddEndpointsApiExplorer();
+services.AddSwaggerGen();
+
+services.AddDefaultAWSOptions(configuration.GetAWSOptions());
+#if RELEASE
+services.AddAWSLambdaHosting(LambdaEventSource.HttpApi);
+#endif
+services.AddAWSService<IAmazonDynamoDB>();
+services.AddScoped<IDynamoDBContext, DynamoDBContext>();
+
+services.AddMediatR(typeof(Program));
+
+services.ConfigureCustomValidationErrors();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
