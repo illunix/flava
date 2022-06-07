@@ -8,6 +8,7 @@
       "flava-web": "apps/flava-web",
       "flava-web-e2e": "apps/flava-web-e2e",
       "web-home-feature": "libs/web/home/feature",
+      "web-shared-app-config": "libs/web/shared/app-config",
       "web-shared-data-access-flava-api": "libs/web/shared/data-access/flava-api",
       "web-shell-feature": "libs/web/shell/feature",
       "web-shell-ui-layout": "libs/web/shell/ui/layout",

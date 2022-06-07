@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from "@angular/core";
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-
+import { IdentityService } from '@flava/web/shared/data-access/flava-api';
 @Component({
     selector: 'flava-sign-in-dialog',
     templateUrl: './sign-in-dialog.component.html',
@@ -10,6 +10,7 @@ export class SignInDialogComponent implements OnInit {
     public signInWithEmail: boolean;
 
     constructor(
+        private identityService: IdentityService,
         private dialogRef: MatDialogRef<SignInDialogComponent>,
         @Inject(MAT_DIALOG_DATA) public data: { signUp: boolean }
     ) { }
@@ -50,5 +51,9 @@ export class SignInDialogComponent implements OnInit {
             '400px',
             '700px'
         );
+    }
+
+    public onSignUpWithEmail(): void {
+        this.identityService.SignUpWithEmail().subscribe();
     }
 }
