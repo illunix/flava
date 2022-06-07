@@ -1,13 +1,13 @@
 {
    "projectType": "library",
-   "sourceRoot": "libs/web/shell/ui/nav-bar/src",
+   "sourceRoot": "libs/web/shared/data-access/flava-api/src",
    "prefix": "flava",
    "targets": {
       "test": {
          "executor": "@nrwl/jest:jest",
-         "outputs": ["coverage/libs/web/shell/ui/nav-bar"],
+         "outputs": ["coverage/libs/web/shared/data-access/flava-api"],
          "options": {
-            "jestConfig": "libs/web/shell/ui/nav-bar/jest.config.ts",
+            "jestConfig": "libs/web/shared/data-access/flava-api/jest.config.ts",
             "passWithNoTests": true
          }
       },
@@ -15,8 +15,8 @@
          "executor": "@nrwl/linter:eslint",
          "options": {
             "lintFilePatterns": [
-               "libs/web/shell/ui/nav-bar/**/*.ts",
-               "libs/web/shell/ui/nav-bar/**/*.html"
+               "libs/web/shared/data-access/flava-api/**/*.ts",
+               "libs/web/shared/data-access/flava-api/**/*.html"
             ]
          }
       }

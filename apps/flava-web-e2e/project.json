@@ -1,28 +1,28 @@
 {
-  "$schema": "..\\..\\node_modules\\nx\\schemas\\project-schema.json",
-  "sourceRoot": "apps/flava-web-e2e/src",
-  "projectType": "application",
-  "targets": {
-    "e2e": {
-      "executor": "@nrwl/cypress:cypress",
-      "options": {
-        "cypressConfig": "apps/flava-web-e2e/cypress.json",
-        "devServerTarget": "flava-web:serve:development"
+   "$schema": "..\\..\\node_modules\\nx\\schemas\\project-schema.json",
+   "sourceRoot": "apps/flava-web-e2e/src",
+   "projectType": "application",
+   "targets": {
+      "e2e": {
+         "executor": "@nrwl/cypress:cypress",
+         "options": {
+            "cypressConfig": "apps/flava-web-e2e/cypress.json",
+            "devServerTarget": "flava-web:serve:development"
+         },
+         "configurations": {
+            "production": {
+               "devServerTarget": "flava-web:serve:production"
+            }
+         }
       },
-      "configurations": {
-        "production": {
-          "devServerTarget": "flava-web:serve:production"
-        }
+      "lint": {
+         "executor": "@nrwl/linter:eslint",
+         "outputs": ["{options.outputFile}"],
+         "options": {
+            "lintFilePatterns": ["apps/flava-web-e2e/**/*.{js,ts}"]
+         }
       }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["apps/flava-web-e2e/**/*.{js,ts}"]
-      }
-    }
-  },
-  "tags": [],
-  "implicitDependencies": ["flava-web"]
+   },
+   "tags": [],
+   "implicitDependencies": ["flava-web"]
 }

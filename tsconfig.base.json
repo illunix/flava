@@ -1,32 +1,39 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "rootDir": ".",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es2015",
-    "module": "esnext",
-    "lib": ["es2017", "dom"],
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "baseUrl": ".",
-    "strictPropertyInitialization": false,
-    "paths": {
-      "@flava/web/home/feature": ["libs/web/home/feature/src/index.ts"],
-      "@flava/web/shell/feature": ["libs/web/shell/feature/src/index.ts"],
-      "@flava/web/shell/ui/layout": ["libs/web/shell/ui/layout/src/index.ts"],
-      "@flava/web/shell/ui/main-view": [
-        "libs/web/shell/ui/main-view/src/index.ts"
-      ],
-      "@flava/web/shell/ui/nav-bar": ["libs/web/shell/ui/nav-bar/src/index.ts"],
-      "@flava/web/shell/ui/sign-in-dialog": [
-        "libs/web/shell/ui/sign-in-dialog/src/index.ts"
-      ]
-    }
-  },
-  "exclude": ["node_modules", "tmp"]
+   "compileOnSave": false,
+   "compilerOptions": {
+      "rootDir": ".",
+      "sourceMap": true,
+      "declaration": false,
+      "moduleResolution": "node",
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "importHelpers": true,
+      "target": "es2015",
+      "module": "esnext",
+      "lib": ["es2017", "dom"],
+      "skipLibCheck": true,
+      "skipDefaultLibCheck": true,
+      "baseUrl": ".",
+      "strictPropertyInitialization": false,
+      "paths": {
+         "@flava/web/home/feature": ["libs/web/home/feature/src/index.ts"],
+         "@flava/web/shared/data-access/flava-api": [
+            "libs/web/shared/data-access/flava-api/src/index.ts"
+         ],
+         "@flava/web/shell/feature": ["libs/web/shell/feature/src/index.ts"],
+         "@flava/web/shell/ui/layout": [
+            "libs/web/shell/ui/layout/src/index.ts"
+         ],
+         "@flava/web/shell/ui/main-view": [
+            "libs/web/shell/ui/main-view/src/index.ts"
+         ],
+         "@flava/web/shell/ui/nav-bar": [
+            "libs/web/shell/ui/nav-bar/src/index.ts"
+         ],
+         "@flava/web/shell/ui/sign-in-dialog": [
+            "libs/web/shell/ui/sign-in-dialog/src/index.ts"
+         ]
+      }
+   },
+   "exclude": ["node_modules", "tmp"]
 }

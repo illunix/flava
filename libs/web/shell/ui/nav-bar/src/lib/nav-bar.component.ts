@@ -10,14 +10,17 @@ import { SignInDialogComponent } from '@flava/web/shell/ui/sign-in-dialog';
 export class NavBarComponent {
   constructor(private dialog: MatDialog) {}
 
-  public onToggleSignInDialog(): void {
+  public onToggleSignInDialog(signUp: boolean = false): void {
     const dialogConfig: MatDialogConfig = {
       disableClose: false,
       autoFocus: true,
       width: '400px',
-      height: '450px'
-    }
-    
+      height: '450px',
+      data: { signUp }
+    };
+
+
+    console.log(dialogConfig);
     this.dialog.open(
       SignInDialogComponent, 
       dialogConfig
