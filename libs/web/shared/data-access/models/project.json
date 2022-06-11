@@ -1,13 +1,13 @@
 {
    "projectType": "library",
-   "sourceRoot": "libs/web/shell/ui/sign-in-dialog/src",
+   "sourceRoot": "libs/web/shared/data-access/models/src",
    "prefix": "flava",
    "targets": {
       "test": {
          "executor": "@nrwl/jest:jest",
-         "outputs": ["coverage/libs/web/shell/ui/sign-in-dialog"],
+         "outputs": ["coverage/libs/web/shared/data-access/models"],
          "options": {
-            "jestConfig": "libs/web/shell/ui/sign-in-dialog/jest.config.ts",
+            "jestConfig": "libs/web/shared/data-access/models/jest.config.ts",
             "passWithNoTests": true
          }
       },
@@ -15,8 +15,8 @@
          "executor": "@nrwl/linter:eslint",
          "options": {
             "lintFilePatterns": [
-               "libs/web/shell/ui/sign-in-dialog/**/*.ts",
-               "libs/web/shell/ui/sign-in-dialog/**/*.html"
+               "libs/web/shared/data-access/models/**/*.ts",
+               "libs/web/shared/data-access/models/**/*.html"
             ]
          }
       }

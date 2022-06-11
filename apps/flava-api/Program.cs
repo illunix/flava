@@ -18,6 +18,19 @@ services.AddControllers(q =>
 
 services.AddRouting(q => q.LowercaseUrls = true);
 
+services.AddCors(options =>
+{
+   options.AddPolicy("webClient", builder =>
+   {
+      builder.WithOrigins(configuration["webClientUrl"])
+          .AllowAnyHeader()
+          .AllowAnyHeader()
+          .AllowAnyMethod()
+          .WithExposedHeaders("Token-Expired")
+          .AllowCredentials();
+   });
+});
+
 services.AddEndpointsApiExplorer();
 services.AddSwaggerGen();
 
@@ -42,6 +55,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors("webClient");
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavBarComponent } from './nav-bar.component';
-import { SignInDialogModule } from '@flava/web/shell/ui/sign-in-dialog';
+import { AuthDialogModule } from '@flava/web/shell/ui/auth-dialog';
 
 @NgModule({
   imports: [
     CommonModule,
-    SignInDialogModule
+    AuthDialogModule
   ],
   declarations: [NavBarComponent],
   exports: [NavBarComponent]

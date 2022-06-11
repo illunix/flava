@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { SignInDialogComponent } from '@flava/web/shell/ui/sign-in-dialog';
+import { AuthDialogComponent } from '@flava/web/shell/ui/auth-dialog';
 
 @Component({
   selector: 'flava-nav-bar',
@@ -20,9 +20,8 @@ export class NavBarComponent {
     };
 
 
-    console.log(dialogConfig);
     this.dialog.open(
-      SignInDialogComponent, 
+      AuthDialogComponent, 
       dialogConfig
     )
       .afterClosed()

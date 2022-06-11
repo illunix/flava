@@ -5,27 +5,27 @@ using FluentValidation;
 using MediatR.Extensions.GenerateMediator;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 
-namespace Flava.API.Features.Identity;
+namespace Flava.API.Features.Authflow;
 
 [GenerateMediator]
 public sealed partial class SignUp
 {
    public sealed partial record Command(
-       string Username,
        string Email,
+       string Username,
        string Password
    )
    {
       public static void AddValidation(AbstractValidator<Command> v)
       {
-         v.RuleFor(q => q.Username)
-             .NotEmpty();
-
          v.RuleFor(q => q.Email)
-             .NotEmpty();
+            .NotEmpty();
+
+         v.RuleFor(q => q.Username)
+            .NotEmpty();
 
          v.RuleFor(q => q.Password)
-             .NotEmpty();
+            .NotEmpty();
       }
    }
 
