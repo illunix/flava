@@ -15,6 +15,7 @@
       "web-shell-ui-auth-dialog": "libs/web/shell/ui/auth-dialog",
       "web-shell-ui-layout": "libs/web/shell/ui/layout",
       "web-shell-ui-main-view": "libs/web/shell/ui/main-view",
-      "web-shell-ui-nav-bar": "libs/web/shell/ui/nav-bar"
+      "web-shell-ui-nav-bar": "libs/web/shell/ui/nav-bar",
+      "web-shell-util": "libs/web/shell/util"
    }
 }

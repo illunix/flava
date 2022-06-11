@@ -1,6 +1,6 @@
 using System.Security.Cryptography;
 using Amazon.DynamoDBv2.DataModel;
-using Flava.API.Infrastructure.Exceptions.Identity;
+using Flava.API.Features.Authflow.Exceptions;
 using FluentValidation;
 using MediatR.Extensions.GenerateMediator;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
@@ -19,7 +19,8 @@ public sealed partial class SignUp
       public static void AddValidation(AbstractValidator<Command> v)
       {
          v.RuleFor(q => q.Email)
-            .NotEmpty();
+            .NotEmpty()
+            .EmailAddress();
 
          v.RuleFor(q => q.Username)
             .NotEmpty();

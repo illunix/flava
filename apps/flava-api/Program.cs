@@ -32,7 +32,10 @@ services.AddCors(options =>
 });
 
 services.AddEndpointsApiExplorer();
-services.AddSwaggerGen();
+services.AddSwaggerGen(q =>
+{
+   q.CustomSchemaIds(q => q.ToString());
+});
 
 services.AddDefaultAWSOptions(configuration.GetAWSOptions());
 #if RELEASE

@@ -38,7 +38,8 @@
          ],
          "@flava/web/shell/ui/nav-bar": [
             "libs/web/shell/ui/nav-bar/src/index.ts"
-         ]
+         ],
+         "@flava/web/shell/util": ["libs/web/shell/util/src/index.ts"]
       }
    },
    "exclude": ["node_modules", "tmp"]

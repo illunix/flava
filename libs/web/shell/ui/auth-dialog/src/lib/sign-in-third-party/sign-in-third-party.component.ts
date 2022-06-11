@@ -1,3 +1,4 @@
+import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthService } from "@abacritt/angularx-social-login";
 import { Component } from "@angular/core";
 
 @Component({
@@ -6,16 +7,18 @@ import { Component } from "@angular/core";
     styleUrls: ['./sign-in-third-party.component.scss']
 })
 export class SignInThirdPartyComponent {
+    constructor(private authService: SocialAuthService) { }
+
     public onSignInWithFacebook(): void {
 
     }
 
     public onSignInWithGoogle(): void {
-
+        this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
     }
 
     public onSignInWithApple(): void {
-
+        this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
     }
 
     public onSignInWithWalletConnect(): void {

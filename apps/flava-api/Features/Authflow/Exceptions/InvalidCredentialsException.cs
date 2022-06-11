@@ -1,4 +1,4 @@
-﻿namespace Flava.API.Infrastructure.Exceptions.Identity;
+namespace Flava.API.Features.Authflow.Exceptions;
 
 public sealed class InvalidCredentialsException : Exception
 {

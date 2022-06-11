@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ShellModule } from '@flava/web/shell/feature'
 import { AppComponent } from './app.component';
 import { getAppConfigProvider } from '@flava/web/shared/app-config';
+import { errorInterceptorProvider } from '@flava/web/shell/util';
 import { environment } from '../environments/environment';
 
 @NgModule({
@@ -18,6 +19,7 @@ import { environment } from '../environments/environment';
   bootstrap: [AppComponent],
   providers: [
     getAppConfigProvider(environment),
+    errorInterceptorProvider
   ]
 })
 export class AppModule {}

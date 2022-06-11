@@ -1,9 +1,11 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
 import { AbstractControl, FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { MatDialogRef } from "@angular/material/dialog";
 import { AuthService } from '@flava/web/shared/data-access/flava-api';
 import { SignUpModel } from "@flava/web/shared/data-access/models";
 import { AuthDialogComponent } from "../auth-dialog.component";
+import { ErrorCode } from '@flava/web/shared/data-access/models';
+import { MatInput } from "@angular/material/input";
 
 @Component({
     selector: 'flava-sign-up',
@@ -30,20 +32,21 @@ export class SignUpComponent {
         }
 
         const signUp: SignUpModel = {
-            email: this.formControls['email'].value,
-            username: this.formControls['username'].value,
-            password: this.formControls['password'].value
+            email: this.form.controls['email'].value,
+            username: this.form.controls['username'].value,
+            password: this.form.controls['password'].value
         }
 
         this.authService.signUp(signUp).subscribe({
             next: () => {
                 this.dialogRef.close();
+            },
+            error: err => {
+                if (err.code == ErrorCode.UserWithThisEmailAlreadyExist) {
+                    this.form.controls['email'].setValue('');
+                }
             }
         })
-    }
-
-    public get formControls(): { [key: string]: AbstractControl } {
-        return this.form.controls;
     }
 
     private createForm(): void {

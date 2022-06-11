@@ -8,6 +8,7 @@ import { AuthDialogComponent } from './auth-dialog.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignInThirdPartyComponent } from './sign-in-third-party/sign-in-third-party.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
 
 @NgModule({
    imports: [
@@ -24,6 +25,29 @@ import { SignUpComponent } from './sign-up/sign-up.component';
       SignInThirdPartyComponent,
       SignUpComponent
    ],
-   exports: [AuthDialogComponent]
+   exports: [AuthDialogComponent],
+   providers: [
+      {
+        provide: 'SocialAuthServiceConfig',
+        useValue: {
+          autoLogin: false,
+          providers: [
+            {
+              id: GoogleLoginProvider.PROVIDER_ID,
+              provider: new GoogleLoginProvider(
+                '624796833023-clhjgupm0pu6vgga7k5i5bsfp6qp6egh.apps.googleusercontent.com'
+              )
+            },
+            {
+              id: FacebookLoginProvider.PROVIDER_ID,
+              provider: new FacebookLoginProvider('561602290896109')
+            }
+          ],
+          onError: (err) => {
+            console.error(err);
+          }
+        } as SocialAuthServiceConfig,
+      }
+   ]
 })
 export class AuthDialogModule {}
